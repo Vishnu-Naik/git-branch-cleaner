@@ -12,7 +12,8 @@ pip install git-branch-cleaner
 ```
 or
 ```commandline
-git clone 
+git clone https://github.com/Vishnu-Naik/git-branch-cleaner
+cd git-branch-cleaner
 python setup.py install
 ```
 
