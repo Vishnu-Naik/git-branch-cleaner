@@ -27,7 +27,6 @@ The command line tool can be used as follows:
 ```bash
 repo_cleaner --repo <path to git repository>
 ```
-``
 
 
 --repo is the optional flag to the command. If this flag is not provided, the current working directory is assumed to be the git repository. 
