@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-branch-cleaner"
+version = "1.0.0"
+description = "Connect to git repository and delete branches which are not in remote repository from local repository"
+readme = "README.md"
+authors = [{ name = "Vishnu Gangadhara Naik", email = "vishnugnaik@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+]
+requires-python = ">=3.10"
+keywords = ["git", "branches", "delete"]
+dependencies = [
+    "GitPython>=3.1.30"
+]
+[project.scripts]
+repo_cleaner = "cleaner.__main__:main"
+
+
+
+[tool.bumpver]
+current_version = "1.0.0"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+
+"src/cleaner/__init__.py" = ["{version}"]
+
+"setup.py" = [
+    "{version}",
+]

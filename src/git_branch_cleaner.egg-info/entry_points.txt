@@ -1,0 +1,2 @@
+[console_scripts]
+repo_cleaner = cleaner.__main__:main

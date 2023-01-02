@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: git-branch-cleaner
+Version: 1.0.0
+Summary: Connect to git repository and delete branches which are not in remote repository from local repository
+Author-email: Vishnu Gangadhara Naik <vishnugnaik@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2022 Vishnu Gangadhara Naik
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Keywords: git,branches,delete
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# GitRepoCleaner
+
+GitRepoCleaner is a tool to clean up git repositories. 
+This tool allows users to delete branches from a local git repository that are not present in the remote repository.
+This tool is useful when you have a lot of branches in your local repository, and you want to clean up your local repository.
+This tool is not intended to delete remote branches as it is not safe to do so and one might need to do a lot of manual work to recover from such a mistake.
+
+# Installation
+To use the tool first install using pip or git clone the repository and run the setup.py file:
+
+    pip install git-repo-cleaner
+
+or
+
+    git clone
+    python setup.py install
+
+
+# Usage
+This tool can be used as a command line tool or as a library. Let's see those two options in detail.
+
+## Command Line Tool
+
+The command line tool can be used to delete branches from a local repository that are not present in the remote repository.
+The command line tool can be used as follows:
+
+    repo_cleaner --repo <path to git repository>
+
+--repo is the optional flag to the command. If this flag is not provided, the current working directory is assumed to be the git repository. 
+The tool will show the branches that are on local and remote. As shown below:
+
+    =================================================
+    List of remote branches:
+    main
+    develop
+    feature/branch1
+    =================================================
+    List of local branches:
+    main
+    develop
+    feature/branch1
+    feature/branch2
+    =================================================
+
+The tool will ask the user if they want to delete the branches that are not present in the remote repository. 
+If the user enters anything else other than Y or y, the tool will end its execution. Else it will display the branches that are not present in the remote repository one after the other which are
+going to be deleted and ask for confirmation before deleting each of the branches.
+

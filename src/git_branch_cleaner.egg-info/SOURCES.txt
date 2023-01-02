@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cleaner/__init__.py
+src/cleaner/__main__.py
+src/cleaner/git_repo_cleaner.py
+src/git_branch_cleaner.egg-info/PKG-INFO
+src/git_branch_cleaner.egg-info/SOURCES.txt
+src/git_branch_cleaner.egg-info/dependency_links.txt
+src/git_branch_cleaner.egg-info/entry_points.txt
+src/git_branch_cleaner.egg-info/requires.txt
+src/git_branch_cleaner.egg-info/top_level.txt
