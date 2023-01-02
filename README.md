@@ -1,6 +1,6 @@
 # GitBranchCleaner
 
-GitRepoCleaner is a tool to clean up git repositories. 
+GitBranchCleaner is a tool to clean up git repositories. 
 This tool allows users to delete branches from a local git repository that are not present in the remote repository.
 This tool is useful when you have a lot of branches in your local repository, and you want to clean up your local repository.
 This tool is not intended to delete remote branches as it is not safe to do so and one might need to do a lot of manual work to recover from such a mistake.
