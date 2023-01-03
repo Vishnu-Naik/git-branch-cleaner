@@ -25,7 +25,7 @@ This tool can be used as a command line tool or as a library. Let's see those tw
 The command line tool can be used to delete branches from a local repository that are not present in the remote repository.
 The command line tool can be used as follows:
 
-```bash
+```commandline
 repo_cleaner --repo <path to git repository>
 ```
 
@@ -61,7 +61,7 @@ from cleaner import git_repo_cleaner
 ```python
 from cleaner import git_repo_cleaner
 
-git_repo_cleaner.main('D:\STUDY MATERIAL\Masters Study Material\WS2022\Thesis\CodeBase\AccessPointSearch')
+git_repo_cleaner.main('/home/username/git_repos/dummy_project')
  ```
 For finer functionality, you can use the GitRepoCleaner class directly as follows:
 ```python
