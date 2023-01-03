@@ -19,6 +19,9 @@ keywords = ["git", "branches", "delete"]
 dependencies = [
     "GitPython>=3.1.30"
 ]
+[project.urls]
+Homepage = "https://github.com/Vishnu-Naik/git-branch-cleaner"
+
 [project.scripts]
 repo_cleaner = "cleaner.__main__:main"
 
