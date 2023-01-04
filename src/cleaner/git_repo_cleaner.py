@@ -86,7 +86,7 @@ class GitRepoCleaner:
                 if branch not in remote_branches:
                     permission_given = input(f"Attempting to DELETE branch: {branch}\n Are you sure? (y/n): ")
 
-                    if permission_given.upper == "Y":
+                    if permission_given.upper() == "Y":
                         print(f"Deleting branch: {branch} ...")
                         repo.delete_head(branch, force=True)
                         print(f"{branch} is deleted from local repository")
